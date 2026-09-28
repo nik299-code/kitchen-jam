@@ -1,0 +1,802 @@
+/*
+ * Kitchen Jam — marketing site.
+ *
+ * The app's own world, not a new one: the tokens below are copied from
+ * src/app/globals.css (light palette) and keep their meanings from
+ * docs/design-system.md — teal acts and clears, yellow is "why it works" and
+ * ratings only, raspberry is danger only (and so never appears here).
+ */
+
+/*
+ * Self-hosted, so a visit sends nothing to a font host (the page promises
+ * privacy). Latin subsets from Google Fonts, both SIL Open Font License.
+ * Shantell Sans is one variable file covering 500–800.
+ */
+@font-face {
+  font-family: "Shantell Sans"; font-style: normal; font-weight: 500 800; font-display: swap;
+  src: url("fonts/shantell-sans-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Zen Maru Gothic"; font-style: normal; font-weight: 500; font-display: swap;
+  src: url("fonts/zen-maru-gothic-500-latin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Zen Maru Gothic"; font-style: normal; font-weight: 700; font-display: swap;
+  src: url("fonts/zen-maru-gothic-700-latin.woff2") format("woff2");
+}
+
+:root {
+  --paper: #fbf8ef;
+  --raised: #fffdf7;
+  --sunk: #f2eddc;
+  --ink: #2e2a26;
+  --ink-soft: #6b635a;
+  --ink-faint: #796f65;
+  --hair: #e2dabf;
+  --teal: #159c8c;
+  --teal-label: #0e786c;
+  --teal-wash: #def3ee;
+  --indigo-wash: #e2eeef;
+  --yuzu-label: #8d6501;
+  --yuzu: #d9a94a;
+
+  --wash-a: var(--indigo-wash);
+  --wash-b: var(--teal-wash);
+  --wash-c: var(--sunk);
+
+  --display: "Shantell Sans", ui-rounded, system-ui, sans-serif;
+  --body: "Zen Maru Gothic", ui-rounded, system-ui, sans-serif;
+
+  --gutter: clamp(20px, 5vw, 72px);
+  --arrive: cubic-bezier(0.16, 1, 0.3, 1);
+  --leave: cubic-bezier(0.7, 0, 0.84, 0);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: color-mix(in srgb, var(--ink) 35%, transparent) var(--paper);
+  scrollbar-width: thin;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 500 17px/1.65 var(--body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection { background: var(--teal-wash); color: var(--ink); }
+
+a { color: inherit; text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--teal-label);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+h1, h2, h3 { font-family: var(--display); font-weight: 700; margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 50;
+  padding: 10px 16px; border-radius: 10px; background: var(--ink); color: var(--paper);
+  text-decoration: none; font-weight: 700;
+}
+.skip:focus { top: 12px; }
+
+.pot { width: 1.6em; height: 1.6em; display: block; flex: none; }
+
+/* ------------------------------------------------------------------ bar */
+
+.bar {
+  position: sticky; top: 0; z-index: 20;
+  height: 72px; padding: 0 var(--gutter);
+  display: flex; align-items: center; gap: 28px;
+  transition: background-color 300ms var(--arrive), box-shadow 300ms var(--arrive);
+}
+/* Past the hero the bar gets solid paper and a hairline, so it stays legible
+   over the page. Paper, not glass: the world has nothing glassy in it. */
+.bar.is-scrolled {
+  background: var(--paper);
+  box-shadow: 0 1px 0 var(--hair);
+}
+
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 700 21px/1 var(--display); text-decoration: none; margin-right: auto;
+}
+.brand .pot { width: 34px; height: 34px; }
+.brand--quiet { font-size: 16px; }
+.brand--quiet .pot { width: 24px; height: 24px; }
+
+.bar__nav { display: flex; gap: 30px; font-size: 15px; }
+.bar__nav a { text-decoration: none; position: relative; min-height: 44px; display: inline-flex; align-items: center; }
+.bar__nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 10px; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: right;
+  transition: transform 350ms var(--arrive);
+}
+.bar__nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* The App Store action: Apple's badge artwork, unmodified (Apple's marketing
+   guidelines), at least 40px tall. Only the link around it moves. */
+.store {
+  display: inline-flex; border-radius: 10px; line-height: 0;
+  transition: transform 180ms var(--arrive);
+}
+.store img { display: block; height: 54px; width: auto; }
+.store:hover { transform: translateY(-2px); }
+.store:active { transform: translateY(0) scale(0.98); transition-duration: 80ms; }
+.store--small img { height: 40px; }
+
+/* ------------------------------------------------------------------ hero */
+
+.hero { padding: clamp(12px, 3vh, 48px) var(--gutter) 0; }
+.hero__copy { max-width: 1160px; margin: 0 auto; text-align: center; }
+/* Zen Maru's dashes are full-width Japanese rules; set them in the display face. */
+.dash { font-family: var(--display); font-weight: 500; }
+
+.hero__title {
+  font-size: clamp(3.6rem, 9.4vw, 6rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
+}
+/* Each line rises out of its own mask on arrival. */
+.hero__title .line { display: inline-block; overflow: clip; padding-bottom: 0.06em; vertical-align: top; }
+@media (max-width: 720px) { .hero__title .line { display: block; } }
+.hero__title .line > span { display: inline-block; }
+
+.hero__lede {
+  max-width: 60ch; margin: 18px auto 0;
+  font-size: clamp(18px, 1.6vw, 21px); line-height: 1.55;
+}
+.hero__act { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero__small { font-size: 14px; color: var(--ink-soft); }
+
+/* The stage: a phone set down on a table of dishes. */
+.stage {
+  position: relative;
+  width: min(1240px, 100%);
+  height: 720px;
+  margin: clamp(12px, 3vh, 40px) auto 0;
+}
+.table { --px: 0; --py: 0; position: absolute; inset: 0; }
+.dish { margin: 0; }
+.table .dish {
+  position: absolute;
+  left: calc(50% + var(--x));
+  top: var(--y);
+  width: calc(210px * var(--s));
+  aspect-ratio: 5 / 4;
+  translate: -50% 0;
+  /* Pointer depth: nearer dishes (bigger) move more. */
+  transform: translate3d(calc(var(--px) * var(--s) * 22px), calc(var(--py) * var(--s) * 14px), 0);
+}
+.dish svg { display: block; width: 100%; height: 100%; overflow: visible; }
+
+.phone {
+  position: relative; z-index: 2;
+  width: 322px; height: 664px; margin: 0 auto;
+  padding: 11px; border-radius: 52px;
+  background: var(--ink);
+  box-shadow:
+    0 2px 0 rgb(255 255 255 / 0.06) inset,
+    0 50px 80px -30px rgb(46 42 38 / 0.45),
+    0 18px 36px -18px rgb(46 42 38 / 0.35);
+}
+.phone__screen {
+  position: relative; height: 100%; overflow: hidden;
+  border-radius: 42px; background: var(--paper);
+  padding: 30px 18px 0;
+}
+.app-top { display: flex; align-items: center; gap: 9px; font: 700 18px/1 var(--display); }
+.app-top .pot { width: 28px; height: 28px; }
+
+.thread { margin-top: 16px; display: flex; flex-direction: column; gap: 12px; }
+.msg { font-size: 14px; line-height: 1.5; }
+.msg--me {
+  align-self: flex-end; max-width: 84%;
+  padding: 10px 14px; border-radius: 18px 18px 5px 18px;
+  background: var(--indigo-wash);
+}
+.msg--app { max-width: 92%; }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  font-size: 13px; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--hair); background: var(--raised);
+  transition: background-color 200ms var(--arrive), border-color 200ms var(--arrive), transform 200ms var(--arrive);
+}
+.chip.is-picked { background: var(--teal-wash); border-color: var(--teal); color: var(--teal-label); font-weight: 700; }
+
+.card {
+  margin-top: 6px; padding: 12px; border-radius: 20px;
+  background: var(--raised); border: 1px solid var(--hair);
+  display: flex; gap: 12px; align-items: flex-end;
+}
+.card__art {
+  width: 96px; flex: none; aspect-ratio: 5 / 4;
+  border-radius: 999px 999px 0 0; background: var(--paper);
+  border: 1px solid var(--hair); border-bottom: 0; overflow: hidden;
+}
+.card__art svg { width: 100%; height: 100%; display: block; }
+.card__title { font: 700 15px/1.25 var(--display); }
+.card__meta { font-size: 12px; color: var(--ink-soft); margin-top: 3px; }
+
+.composer {
+  position: absolute; left: 14px; right: 14px; bottom: 16px;
+  min-height: 50px; padding: 0 8px 0 16px; border-radius: 25px;
+  border: 1px solid var(--hair); background: var(--raised);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 14px; color: var(--ink-faint);
+}
+.composer.is-typing { color: var(--ink); }
+.send {
+  width: 36px; height: 36px; border-radius: 50%; background: var(--teal-label);
+  mask: none;
+  display: grid; place-items: center; flex: none;
+}
+.send::before {
+  content: ""; width: 12px; height: 12px;
+  border-top: 2px solid var(--paper); border-right: 2px solid var(--paper);
+  transform: translateX(-2px) rotate(45deg);
+}
+
+/* ------------------------------------------------------------------ ask */
+
+.ask {
+  max-width: 1240px; margin: clamp(110px, 16vh, 180px) auto 0; padding: 0 var(--gutter);
+  display: grid; grid-template-columns: 7fr 5fr; gap: clamp(40px, 7vw, 110px); align-items: center;
+}
+.ask__title { font-size: clamp(2.4rem, 4.6vw, 4.1rem); line-height: 1.04; letter-spacing: -0.015em; }
+.ask__title em { font-style: normal; color: var(--ink-soft); }
+.ask__body p { font-size: 18px; max-width: 46ch; }
+.prompts { list-style: none; margin: 28px 0 0; padding: 0; }
+.prompts li {
+  font: 500 clamp(18px, 1.6vw, 21px)/1.35 var(--display);
+  padding: 14px 0; border-top: 1px solid var(--hair);
+}
+.prompts li:last-child { border-bottom: 1px solid var(--hair); }
+.prompts li::before,
+.prompts li::after { font-family: var(--body); font-weight: 700; color: var(--ink-faint); }
+.prompts li::before { content: "\201C"; }
+.prompts li::after { content: "\201D"; }
+
+/* ------------------------------------------------------------------ why */
+/*
+ * The app's own recipe card, set down at the scale of a cookbook page: the
+ * drawing at hero size, and "why it works" in the app's real form — the yuzu
+ * ribbon over a dashed yuzu-wash panel, the change in bold shoyu, then why.
+ * The ribbon is part of the depicted card, not a label over the section.
+ */
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.why { max-width: 1180px; margin: clamp(110px, 16vh, 180px) auto 0; padding: 0 var(--gutter); }
+.rcard {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 56px);
+  background: var(--raised); border: 1px solid var(--hair); border-radius: 36px;
+}
+.rcard__art {
+  aspect-ratio: 5 / 4; border-radius: 999px 999px 0 0;
+  background: var(--paper); border: 1px solid var(--hair); border-bottom: 0;
+  padding: 4% 0 0;
+}
+/* The drawings leave headroom above the dish; at this size it is empty arch. */
+.rcard__art svg { width: 100%; height: 100%; display: block; overflow: visible; transform: scale(1.18); transform-origin: 50% 88%; }
+.rcard__title { font: 700 clamp(1.7rem, 2.6vw, 2.3rem)/1.1 var(--display); }
+.rcard__meta { margin-top: 6px; color: var(--ink-soft); font-size: 15px; font-variant-numeric: tabular-nums; }
+.ribbon {
+  display: inline-flex; padding: 7px 15px; border-radius: 999px;
+  font: 700 13px/1 var(--body); letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--ink); color: var(--paper);
+}
+.ribbon--yuzu { background: var(--yuzu-label); margin-top: 26px; }
+.rcard__why {
+  margin-top: 12px; padding: clamp(18px, 2vw, 26px);
+  border: 1.5px dashed color-mix(in srgb, var(--yuzu-label) 45%, var(--hair)); border-radius: 22px;
+  background: #fff0bf;
+}
+.rcard__swap { font: 700 16px/1.3 var(--body); color: #8b5e3c; }
+.rcard__reason {
+  margin-top: 8px;
+  font: 700 clamp(1.45rem, 2.5vw, 2.15rem)/1.28 var(--display); letter-spacing: -0.005em;
+}
+.rcard__reason .w { transition: opacity 240ms linear; }
+.why__note { margin: 26px auto 0; max-width: 46ch; color: var(--ink-soft); font-size: 18px; text-align: center; }
+@media (max-width: 860px) {
+  .rcard { grid-template-columns: 1fr; border-radius: 28px; }
+  .rcard__art { max-width: 340px; width: 100%; margin: 0 auto; }
+}
+
+/* ------------------------------------------------------------------ cook */
+
+.cook {
+  max-width: 1240px; margin: clamp(120px, 18vh, 200px) auto 0; padding: 0 var(--gutter);
+  display: grid; grid-template-columns: auto 1fr; gap: clamp(48px, 8vw, 120px); align-items: center;
+}
+.phone--still { width: 300px; height: 540px; border-radius: 48px; }
+.phone--still .phone__screen { border-radius: 38px; }
+.timer {
+  margin-top: 26px; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 18px; border-radius: 999px;
+  background: var(--teal-wash); color: var(--teal-label);
+  font: 700 18px/1 var(--body); font-variant-numeric: tabular-nums;
+}
+.timer__dot { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); }
+.js .timer__dot { animation: pulse 1.6s var(--arrive) infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgb(21 156 140 / 0.45); } 100% { box-shadow: 0 0 0 10px rgb(21 156 140 / 0); } }
+/* The real cooking screen's ingredients drawer, closed. */
+.drawer {
+  margin: 0 -24px; padding: 12px 24px 26px; border-top: 1px solid var(--hair);
+  background: var(--raised); border-radius: 22px 22px 0 0;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  font: 700 15px/1 var(--body);
+}
+.drawer::before { content: ""; width: 36px; height: 4px; border-radius: 2px; background: var(--hair); }
+
+
+/* ---------------------------------------------------------- features */
+/*
+ * Eight features as tabs. Hovering (or clicking, or arrowing to) one swaps the
+ * headline and the phone's screen to that use case, so each is shown, not
+ * described. On a phone the tabs become a swipeable row of chips under the
+ * phone, which keeps the screen in view while you tap.
+ */
+.cook__title { font-size: clamp(2.3rem, 4.2vw, 3.8rem); line-height: 1.05; letter-spacing: -0.015em; min-height: 2.2em; display: flex; align-items: flex-end; }
+.cook__title span { display: inline-block; transition: opacity 180ms var(--leave), transform 180ms var(--leave); }
+.cook__title span.is-out { opacity: 0; transform: translateY(0.18em); }
+
+.feats { margin-top: 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; max-width: 740px; }
+.feat {
+  appearance: none; border: 0; background: transparent; font: inherit; color: inherit; text-align: left; cursor: pointer;
+  position: relative; padding: 16px 16px 16px 16px; border-radius: 16px;
+  display: flex; flex-direction: column; gap: 3px; min-height: 44px;
+  transition: background-color 220ms var(--arrive);
+}
+.feat::before {
+  content: ""; position: absolute; left: 16px; right: 16px; top: 0; height: 1px; background: var(--hair);
+  transition: opacity 220ms var(--arrive);
+}
+.feat__t { font-weight: 700; color: var(--ink-soft); transition: color 220ms var(--arrive); }
+.feat__d { font-size: 15px; line-height: 1.5; color: var(--ink-faint); }
+.feat:hover .feat__t { color: var(--ink); }
+.feat[aria-selected="true"] { background: var(--raised); box-shadow: 0 1px 0 var(--hair), 0 10px 26px -18px rgb(46 42 38 / 0.35); }
+.feat[aria-selected="true"]::before { opacity: 0; }
+.feat[aria-selected="true"] .feat__t { color: var(--ink); }
+.feat[aria-selected="true"] .feat__d { color: var(--ink-soft); }
+.feat:focus-visible { outline: 2px solid var(--teal-label); outline-offset: 2px; }
+
+/* The screens share the phone; one shows at a time. */
+.phone__screen--feat { padding: 0; }
+.fs {
+  position: absolute; inset: 0; padding: 48px 22px 0; display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transform: translateY(10px) scale(0.985);
+  transition: opacity 260ms var(--leave), transform 320ms var(--leave), visibility 0s linear 320ms;
+}
+.fs.is-active {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity 380ms var(--arrive) 60ms, transform 520ms var(--arrive) 60ms, visibility 0s;
+}
+.fs-count { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.fs-title { font: 700 24px/1.12 var(--display); margin-top: 10px; }
+.fs-title--sm { margin-top: 0; font-size: 26px; }
+.fs-step { font-size: 19px; line-height: 1.5; margin-top: 12px; }
+.fs-hint { margin-top: auto; margin-bottom: 14px; text-align: center; font-size: 13px; color: var(--ink-faint); }
+.fs .drawer { margin: 0 -22px; }
+
+/* read aloud */
+.speaking {
+  margin-top: 22px; align-self: flex-start; display: inline-flex; align-items: center; gap: 12px;
+  padding: 11px 16px; border-radius: 999px; background: var(--indigo-wash); font-weight: 700; font-size: 15px;
+}
+.bars { display: inline-flex; align-items: center; gap: 3px; height: 18px; }
+.bars i { width: 3px; height: 100%; border-radius: 2px; background: var(--ink); transform-origin: 50% 50%; transform: scaleY(0.35); }
+
+/* talk */
+.fs--talk { padding-top: 46px; }
+.listen { margin-top: auto; margin-bottom: 44px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.listen__label { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-label); }
+.listen__words { font: 700 22px/1.3 var(--display); min-height: 2.6em; padding: 0 6px; }
+.mic {
+  width: 76px; height: 76px; border-radius: 50%; background: var(--teal-label); display: grid; place-items: center; position: relative;
+}
+.mic svg { width: 32px; height: 32px; fill: none; stroke: var(--paper); stroke-width: 1.8; stroke-linecap: round; }
+.mic::before, .mic::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--teal); opacity: 0; }
+
+/* save */
+.saved__art {
+  width: 70%; align-self: center; aspect-ratio: 5 / 4; border-radius: 999px 999px 0 0;
+  background: var(--raised); border: 1px solid var(--hair); border-bottom: 0; padding-top: 6%;
+}
+.saved__art svg, .bubble__art svg { width: 100%; height: 100%; display: block; }
+.fs--save .fs-title { margin-top: 16px; }
+.saved__stars { display: flex; gap: 4px; margin-top: 8px; }
+.saved__stars svg { width: 18px; height: 18px; fill: var(--yuzu); stroke: var(--yuzu); stroke-width: 1.6; stroke-linejoin: round; display: block; }
+.saved__stars .off svg { fill: none; stroke: var(--ink-faint); }
+.saved__label { margin-top: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.notes { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.notes li { padding: 10px 12px; border-radius: 12px; background: var(--raised); border: 1px solid var(--hair); font-size: 15px; }
+
+/* share */
+.share__to { font-size: 13px; color: var(--ink-soft); padding-bottom: 12px; border-bottom: 1px solid var(--hair); }
+.bubble { margin-top: 26px; align-self: flex-end; width: 84%; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.bubble__card { width: 100%; border-radius: 18px 18px 6px 18px; background: var(--raised); border: 1px solid var(--hair); padding: 12px; }
+.bubble__art { aspect-ratio: 5 / 4; border-radius: 12px; background: var(--indigo-wash); padding: 6% 8% 0; }
+.bubble__title { font: 700 16px/1.25 var(--display); margin-top: 10px; }
+.bubble__meta { font-size: 12px; color: var(--ink-soft); margin-top: 2px; }
+.bubble__text { padding: 9px 14px; border-radius: 18px 18px 6px 18px; background: var(--indigo-wash); font-size: 15px; }
+.share__added { margin-top: 18px; align-self: center; font-size: 13px; color: var(--teal-label); font-weight: 700; }
+
+/* shopping */
+.fs--shop { padding-bottom: 0; }
+.list { position: relative; margin-top: 14px; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(#000 82%, transparent); mask-image: linear-gradient(#000 82%, transparent); }
+.aisle { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.aisle:first-child { margin-top: 0; }
+.item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--hair); font-size: 16px; }
+.box { width: 20px; height: 20px; border-radius: 6px; border: 1.5px solid var(--ink-faint); flex: none; position: relative; }
+.item.is-done { color: var(--ink-faint); text-decoration: line-through; text-decoration-thickness: 1px; }
+.item.is-done .box { background: var(--teal-label); border-color: var(--teal-label); }
+.item.is-done .box::after { content: ""; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px; border: solid var(--paper); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+.probably { margin-top: 16px; padding: 12px; border-radius: 12px; border: 1px dashed var(--hair); font-size: 14px; color: var(--ink-soft); }
+
+/* pantry */
+.added { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.added span { padding: 8px 12px; border-radius: 999px; background: var(--teal-wash); color: var(--teal-label); font-weight: 700; font-size: 14px; }
+.staples { margin-top: 10px; font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
+
+/* scale */
+.serves { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 14px; background: var(--raised); border: 1px solid var(--hair); font-weight: 700; }
+.stepper { display: inline-flex; align-items: center; gap: 12px; }
+.stepper i { font-style: normal; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--hair); display: grid; place-items: center; color: var(--ink-soft); }
+.stepper b { min-width: 1.2em; text-align: center; font-variant-numeric: tabular-nums; }
+.amounts { list-style: none; margin: 14px 0 0; padding: 0; }
+.amounts li { display: flex; align-items: baseline; gap: 8px; padding: 12px 2px; border-bottom: 1px solid var(--hair); font-size: 16px; }
+.amounts li span { flex: 1; }
+.amounts b { font-variant-numeric: tabular-nums; transition: color 300ms var(--arrive); }
+.amounts b.is-changed { color: var(--teal-label); }
+.amounts em { font-style: normal; font-size: 12px; font-weight: 700; color: var(--ink-faint); text-transform: uppercase; letter-spacing: 0.06em; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fs--read.is-active .bars i { animation: talk 900ms ease-in-out infinite; }
+  .fs--read.is-active .bars i:nth-child(2) { animation-delay: -200ms; }
+  .fs--read.is-active .bars i:nth-child(3) { animation-delay: -450ms; }
+  .fs--read.is-active .bars i:nth-child(4) { animation-delay: -100ms; }
+  .fs--read.is-active .bars i:nth-child(5) { animation-delay: -650ms; }
+  .fs--talk.is-active .mic::before { animation: ring 1.8s var(--arrive) infinite; }
+  .fs--talk.is-active .mic::after { animation: ring 1.8s var(--arrive) 0.6s infinite; }
+  .fs--shop.is-active .list__roll { animation: roll 9s ease-in-out 0.8s infinite alternate; }
+}
+@keyframes talk { 0%, 100% { transform: scaleY(0.3); } 50% { transform: scaleY(1); } }
+@keyframes ring { from { transform: scale(1); opacity: 0.6; } to { transform: scale(1.7); opacity: 0; } }
+@keyframes roll { 0%, 15% { transform: none; } 85%, 100% { transform: translateY(-38%); } }
+
+@media (max-width: 980px) {
+  /* Headline, then the tabs, then the phone: all three fit one phone screen,
+     so the screen you change stays in view while you tap. */
+  .cook { gap: 18px; }
+  .cook__copy { display: contents; }
+  .cook__title { order: 1; min-height: 2.2em; }
+  .feats { order: 2; margin-top: 0; }
+  .cook__phone { order: 3; }
+}
+@media (max-width: 720px) {
+  .feats {
+    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: max-content;
+    overflow-x: auto; scroll-snap-type: x mandatory; gap: 8px; margin: 0; padding: 4px 0 10px;
+    scrollbar-width: none;
+  }
+  .feats::-webkit-scrollbar { display: none; }
+  .feat { scroll-snap-align: start; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--hair); background: var(--raised); }
+  .feat::before, .feat__d { display: none; }
+  .feat[aria-selected="true"] { background: var(--ink); border-color: var(--ink); box-shadow: none; }
+  .feat[aria-selected="true"] .feat__t { color: var(--paper); }
+  .feat__t { font-size: 15px; white-space: nowrap; }
+}
+
+/* ------------------------------------------------------------------ library */
+
+.library {
+  max-width: 1240px; margin: clamp(130px, 20vh, 220px) auto 0; padding: 0 var(--gutter);
+  text-align: center;
+}
+.library h2 { font-size: clamp(2.4rem, 4.6vw, 4.1rem); line-height: 1.04; letter-spacing: -0.015em; }
+.library__lede { max-width: 50ch; margin: 18px auto 0; font-size: 18px; }
+.tiles {
+  list-style: none; margin: 56px 0 0; padding: 0; text-align: left;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px;
+}
+.tile__art {
+  background: var(--w); border-radius: 22px; padding: 14px 18% 0;
+  display: flex;
+}
+.tile__art svg {
+  width: 100%; aspect-ratio: 5 / 4; height: auto; display: block;
+  background: var(--raised); border: 1px solid var(--hair); border-bottom: 0;
+  border-radius: 999px 999px 0 0; overflow: hidden;
+}
+.tile__title { font: 700 17px/1.25 var(--display); margin-top: 12px; }
+.tile__meta { font-size: 14px; color: var(--ink-soft); margin-top: 2px; font-variant-numeric: tabular-nums; }
+.library__note { margin: 36px auto 0; max-width: 52ch; font-size: 15px; color: var(--ink-soft); }
+
+/* ------------------------------------------------------------------ trust */
+
+.trust {
+  max-width: 1240px; margin: clamp(110px, 16vh, 180px) auto 0; padding: 0 var(--gutter);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch;
+}
+.trust h2 { font-size: clamp(1.8rem, 2.8vw, 2.5rem); line-height: 1.12; }
+.trust p { margin-top: 16px; font-size: 17px; max-width: 48ch; }
+.trust__allergens { padding: clamp(32px, 4vw, 56px); border-radius: 32px; background: var(--teal-wash); }
+.trust__privacy { padding: clamp(32px, 4vw, 56px); border-radius: 32px; border: 1px solid var(--hair); background: var(--raised); }
+.hidden-sources { list-style: none; margin: 24px 0 0; padding: 0; max-width: 420px; }
+.hidden-sources li {
+  display: flex; justify-content: space-between; gap: 16px;
+  padding: 12px 0; border-top: 1px solid color-mix(in srgb, var(--teal-label) 25%, transparent);
+  font-weight: 700;
+}
+.hidden-sources li span:last-child { color: var(--teal-label); }
+.fine { color: color-mix(in srgb, var(--ink) 78%, var(--teal-label)); font-size: 15px !important; }
+
+/* ------------------------------------------------------------------ close */
+
+.close {
+  margin-top: clamp(110px, 16vh, 180px);
+  padding: clamp(70px, 10vh, 110px) var(--gutter) clamp(60px, 9vh, 90px);
+  background: var(--raised); border-top: 1px solid var(--hair);
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.close__row { display: flex; align-items: flex-end; justify-content: center; gap: clamp(8px, 2vw, 28px); }
+.close__row .dish { width: clamp(84px, 11vw, 150px); aspect-ratio: 5 / 4; }
+.close__title {
+  margin: 34px 0 30px; display: inline-flex; align-items: center; gap: 0.28em;
+  font-size: clamp(3rem, 7vw, 5.4rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1;
+}
+.close__title .pot { width: 1.05em; height: 1.05em; }
+.close__small { margin-top: 22px; max-width: 48ch; font-size: 14px; color: var(--ink-soft); }
+
+.foot {
+  padding: 26px var(--gutter) 34px; border-top: 1px solid var(--hair); background: var(--raised);
+  display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
+  font-size: 14px; color: var(--ink-soft);
+}
+.foot nav { display: flex; gap: 26px; }
+.foot a { color: var(--ink-soft); min-height: 44px; display: inline-flex; align-items: center; }
+.foot a:hover { color: var(--ink); }
+
+/* ================================================================== motion */
+/*
+ * Everything above is the finished page, visible with no script. The rules
+ * below only apply once site.js has run (html.js) and the visitor has not
+ * asked for less motion — so a failed script, or reduced motion, still gets
+ * the whole page.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .js .hero__title .line > span { animation: rise 900ms var(--arrive) both; }
+  .js .hero__title .line:nth-child(2) > span { animation-delay: 110ms; }
+  .js .hero__lede,
+  .js .hero__act { animation: fade 800ms var(--arrive) 320ms both; }
+  .js .hero__act { animation-delay: 420ms; }
+  .js .phone:not(.phone--still) { animation: set-down 1100ms var(--arrive) 260ms both; }
+
+  /* Demo steps start hidden only when the demo is actually going to run. */
+  .demo-live [data-step] { opacity: 0; transform: translateY(10px); }
+  .demo-live [data-step].is-in {
+    opacity: 1; transform: none;
+    transition: opacity 420ms var(--arrive), transform 520ms var(--arrive);
+  }
+  .demo-live .thread.is-clearing { opacity: 0; transition: opacity 380ms var(--leave); }
+
+  /* The example requests arrive one by one as they scroll in, like messages
+     being sent: from the right, the way the cook's own bubbles sit. */
+  .js .prompts li { opacity: 0; transform: translateX(28px); }
+  .js .prompts li.is-in {
+    opacity: 1; transform: none;
+    transition: opacity 600ms var(--arrive), transform 800ms var(--arrive);
+  }
+
+  /* Scroll: the dishes drift apart as the phone moves up out of the table. */
+  @supports (animation-timeline: view()) {
+    .table .dish { animation: drift linear both; animation-timeline: view(); animation-range: exit -10% exit 90%; }
+    .table .dish:nth-child(-n + 4) { --dir: -1; }
+    .table .dish:nth-child(n + 5) { --dir: 1; }
+  }
+}
+
+@keyframes rise { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes set-down {
+  from { opacity: 0; transform: translateY(60px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes drift { to { translate: calc(-50% + var(--dir) * 70px) -60px; } }
+
+/* Short laptop screens: the demo's card must still land above the fold. */
+@media (min-width: 721px) and (max-height: 860px) {
+  .hero { padding-top: 18px; }
+  .hero__title { font-size: clamp(3.2rem, 6.4vw, 4.2rem); }
+  .hero__lede { margin-top: 10px; font-size: 18px; }
+  .hero__act { margin-top: 18px; gap: 8px; }
+  .stage { height: 640px; }
+  .phone:not(.phone--still) { height: 600px; }
+  .phone:not(.phone--still) .phone__screen { border-radius: 38px; padding-top: 20px; }
+  .phone:not(.phone--still) .thread { margin-top: 12px; gap: 10px; }
+  .table .dish { width: calc(190px * var(--s)); }
+}
+
+/* ================================================================== narrow */
+
+@media (max-width: 980px) {
+  .bar__nav { display: none; }
+  .ask, .cook { grid-template-columns: 1fr; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+  .trust { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .bar { height: 62px; gap: 12px; }
+  .brand { font-size: 18px; }
+  .brand .pot { width: 30px; height: 30px; }
+
+  .hero__lede { font-size: 18px; }
+  /* On a phone the table sets three dishes above the phone and three below,
+     every one whole: tucked behind its edges they read as clipped. */
+  .stage { height: 860px; margin-top: 28px; }
+  .table .dish { width: 30%; translate: 0 0; left: auto; }
+  .table .dish:nth-child(1) { left: 1%; top: 0; }
+  .table .dish:nth-child(2) { left: 35%; top: 12px; }
+  .table .dish:nth-child(6) { left: 69%; top: 0; }
+  .table .dish:nth-child(3) { left: 1%; top: auto; bottom: 0; }
+  .table .dish:nth-child(7) { left: 35%; top: auto; bottom: 10px; }
+  .table .dish:nth-child(8) { left: 69%; top: auto; bottom: 0; }
+  .table .dish:nth-child(4),
+  .table .dish:nth-child(5) { display: none; }
+  /* Padding, not the phone's margin: a first child's top margin collapses
+     through the stage and moves the stage instead of the phone. */
+  .stage { padding-top: 116px; }
+  .phone { width: 286px; height: 600px; border-radius: 46px; }
+  .phone__screen { border-radius: 36px; padding: 40px 15px 0; }
+  .phone--still { width: 270px; height: 500px; }
+  .cook__phone .phone { margin: 0 auto; }
+    .tiles .tile__title { font-size: 15px; }
+  .tiles .tile__meta { font-size: 13px; }
+  .trust__allergens, .trust__privacy { border-radius: 24px; }
+  .foot { justify-content: center; }
+  /* Five dishes do not fit a phone's width; three do, whole. */
+  .close__row .dish:nth-child(n + 4) { display: none; }
+  .close__row .dish { width: 30%; max-width: 120px; }
+}
+@media (max-width: 720px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .table .dish { animation: none; }
+  }
+}
+
+/* ================================================================== support */
+/*
+ * The support page: a search, a topic list that stays in view, and answers
+ * that fold. Same paper, ink and faces as the home page; no new colours.
+ */
+.support-page { background: var(--paper); }
+.sp { max-width: 1180px; margin: 0 auto; padding: clamp(40px, 8vh, 88px) var(--gutter) 0; }
+.sp-head h1 { font-size: clamp(2.8rem, 6vw, 4.6rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+.sp-search {
+  margin-top: 28px; max-width: 620px; min-height: 56px; padding: 0 20px;
+  display: flex; align-items: center; gap: 12px;
+  background: var(--raised); border: 1px solid var(--hair); border-radius: 28px;
+  transition: border-color 200ms var(--arrive), box-shadow 200ms var(--arrive);
+}
+.sp-search:focus-within { border-color: var(--ink-soft); box-shadow: 0 10px 26px -18px rgb(46 42 38 / 0.4); }
+.sp-search svg { width: 20px; height: 20px; flex: none; fill: none; stroke: var(--ink-faint); stroke-width: 2; stroke-linecap: round; }
+.sp-search input { flex: 1; min-width: 0; border: 0; background: transparent; font: 500 17px var(--body); color: var(--ink); outline: none; }
+.sp-search input::placeholder { color: var(--ink-faint); }
+.sp-empty { margin-top: 16px; color: var(--ink-soft); }
+
+.sp-body { margin-top: clamp(40px, 7vh, 72px); display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.sp-toc { position: sticky; top: 104px; display: flex; flex-direction: column; }
+.sp-toc a {
+  min-height: 44px; display: flex; align-items: center; padding-left: 16px;
+  border-left: 2px solid var(--hair); color: var(--ink-soft); text-decoration: none;
+  transition: color 200ms var(--arrive), border-color 200ms var(--arrive);
+}
+.sp-toc a:hover { color: var(--ink); }
+.sp-toc a.is-here { color: var(--ink); border-left-color: var(--ink); font-weight: 700; }
+
+.sp-group { scroll-margin-top: 96px; }
+.sp-group + .sp-group { margin-top: 56px; }
+.sp-group h2 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); line-height: 1.15; margin-bottom: 10px; }
+
+.qa { border-bottom: 1px solid var(--hair); }
+.qa summary {
+  list-style: none; cursor: pointer; min-height: 44px; padding: 20px 44px 20px 0; position: relative;
+  font: 700 19px/1.35 var(--body);
+}
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary::after {
+  content: ""; position: absolute; right: 8px; top: 50%; width: 12px; height: 12px; margin-top: -9px;
+  border-right: 2px solid var(--ink-soft); border-bottom: 2px solid var(--ink-soft);
+  transform: rotate(45deg); transition: transform 300ms var(--arrive);
+}
+.qa[open] summary::after { transform: translateY(5px) rotate(225deg); }
+.qa summary:hover { color: var(--ink); }
+.qa summary:focus-visible { outline: 2px solid var(--teal-label); outline-offset: 4px; border-radius: 6px; }
+.qa__a { padding: 0 0 22px; max-width: 64ch; }
+.qa__a p + p, .qa__a ul + p { margin-top: 12px; }
+.qa__a a { color: var(--teal-label); }
+.qa__warn { padding: 14px 16px; border-radius: 14px; background: var(--teal-wash); }
+.providers { list-style: none; margin: 0; padding: 0; }
+.providers li { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--hair); }
+.providers li:first-child { border-top: 0; padding-top: 0; }
+.providers span { color: var(--ink-soft); }
+.qa.is-hidden, .sp-group.is-hidden { display: none; }
+mark { background: var(--yuzu-wash, #fff0bf); color: inherit; border-radius: 3px; padding: 0 1px; }
+
+/* Answers open smoothly where the browser can animate to auto height. */
+@supports (interpolate-size: allow-keywords) {
+  @media (prefers-reduced-motion: no-preference) {
+    .sp { interpolate-size: allow-keywords; }
+    .qa::details-content { height: 0; overflow: clip; opacity: 0; transition: height 420ms var(--arrive), opacity 320ms var(--arrive), content-visibility 420ms allow-discrete; }
+    .qa[open]::details-content { height: auto; opacity: 1; }
+  }
+}
+
+.sp-contact {
+  scroll-margin-top: 96px; margin-top: 72px; padding: clamp(28px, 4vw, 48px);
+  display: grid; grid-template-columns: 180px 1fr; gap: clamp(20px, 4vw, 44px); align-items: center;
+  background: var(--raised); border: 1px solid var(--hair); border-radius: 32px;
+}
+.sp-contact__art { aspect-ratio: 5 / 4; border-radius: 999px 999px 0 0; background: var(--paper); border: 1px solid var(--hair); border-bottom: 0; padding-top: 8%; }
+.sp-contact__art svg { width: 100%; height: 100%; display: block; }
+.sp-contact h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); line-height: 1.15; }
+.sp-contact p { margin-top: 12px; max-width: 56ch; color: var(--ink-soft); }
+.sp-mail {
+  margin-top: 20px; display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px;
+  border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 700; text-decoration: none;
+  transition: transform 180ms var(--arrive);
+}
+.sp-mail:hover { transform: translateY(-2px); color: var(--paper); }
+.support-page .foot { margin-top: clamp(80px, 12vh, 140px); }
+
+@media (max-width: 860px) {
+  .sp-body { grid-template-columns: 1fr; }
+  .sp-toc {
+    position: static; flex-direction: row; overflow-x: auto; gap: 8px; scrollbar-width: none;
+    margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter);
+  }
+  .sp-toc::-webkit-scrollbar { display: none; }
+  .sp-toc a { border: 1px solid var(--hair); border-radius: 999px; padding: 0 16px; white-space: nowrap; background: var(--raised); }
+  /* Not sticky on a phone, so no "you are here" state: it would be wrong
+     as soon as the list scrolls away. */
+  .sp-toc a.is-here { border-color: var(--hair); background: var(--raised); color: var(--ink-soft); font-weight: 500; }
+  .providers li { grid-template-columns: 1fr; gap: 2px; }
+  .sp-contact { grid-template-columns: 1fr; }
+  .sp-contact__art { width: 160px; }
+  .qa summary { font-size: 17px; }
+}
+@media (max-width: 720px) {
+  .support-page .bar__nav { display: none; }
+}
+
+/* Until the App Store listing is live: a quiet "coming soon" in place of
+   Apple's badge, which may only link to an app that is actually there.
+   Swap back to the .store badge links at launch. */
+.soon {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 22px;
+  border-radius: 14px; border: 1.5px solid var(--ink); color: var(--ink);
+  font: 700 16px/1 var(--body); letter-spacing: 0.01em; margin: 0;
+}
+.soon--small { min-height: 40px; padding: 0 16px; border-radius: 12px; font-size: 14px; }

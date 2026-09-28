@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 88 H100 M32 91.5 H86" stroke-width="1.5" opacity="0.4"/>
+<path fill="#D9A15E" d="M26 72 C25 80 31 84 40 84 L80 84 C89 84 95 80 94 72 Z"/>
+<path fill="#8B5E3C" d="M22 65 C20 60 26 57 34 57 L86 57 C94 57 100 60 98 65 C100 71 94 74 86 74 L34 74 C26 74 20 71 22 65 Z"/>
+<path d="M30 67 L34 64 M44 69 L48 66 M60 67 L64 64 M76 69 L80 66 M88 66 L91 63" stroke-width="1.5" opacity="0.4"/>
+<path fill="#F2B53A" d="M22 58 L98 57 L93 62 L87 60 L83 70 L78 60.5 L60 61 L55 67 L50 61 L32 61.5 Z"/>
+<path fill="#79A54F" d="M18 55 C20 50 24 56 28 51 C32 56 36 50 40 54 C44 49 48 55 52 50 C56 55 60 49 64 54 C68 49 72 55 76 50 C80 55 84 49 88 54 C92 50 96 55 102 53 L98 59 L22 59 Z"/>
+<path fill="#D9A15E" d="M22 50 C22 31 40 20 60 20 C80 20 98 31 98 50 C98 54 96 56 92 56 L28 56 C24 56 22 54 22 50 Z"/>
+<path d="M34 32 C40 26 48 24 54 24" stroke-width="1.5" opacity="0.4"/>
+<path fill="#F7EEDC" stroke-width="1.5" d="M45 34 l3 -1 l0.5 2 l-3 1 Z M60 29 l3 0 l0 2 l-3 0 Z M74 34 l3 1 l-0.5 2 l-3 -1 Z M52 42 l3 -0.5 l0.3 2 l-3 0.5 Z M67 42 l3 0.5 l-0.3 2 l-3 -0.5 Z M83 42 l2.6 1 l-0.6 2 l-2.6 -1 Z M36 43 l2.6 -1 l0.6 2 l-2.6 1 Z"/>
+</svg>

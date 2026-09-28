@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M20 88 H98 M32 91.5 H84" stroke-width="1.5" opacity="0.4"/>
+<path fill="#EFC96E" d="M86 45 L32 43 C18 43 13 55 14 64 C15 74 21 83 32 84 L86 83 Z"/>
+<path fill="#B98A4E" stroke="none" d="M58 52 a2.4 1.6 0 1 0 0.1 0 Z M70 70 a2.6 1.7 0 1 0 0.1 0 Z M62 76 a1.6 1.1 0 1 0 0.1 0 Z M74 50 a1.6 1.1 0 1 0 0.1 0 Z"/>
+<path d="M52 47 C62 56 70 58 84 58 M54 78 C62 74 70 73 78 74" stroke-width="1.5" opacity="0.4"/>
+<path fill="#CDD3D6" d="M50 44 L32 43 C18 43 13 55 14 64 C15 74 21 83 32 84 L50 83.5 C47 78 52 72 48 66 C52 60 47 52 50 44 Z"/>
+<path d="M22 52 L30 58 L24 64 M36 48 L42 56 M28 72 L38 70 L34 78 M42 62 L44 70" stroke-width="1.5" opacity="0.4"/>
+<ellipse fill="#EFC96E" cx="86" cy="64" rx="12" ry="19"/>
+<ellipse fill="#F7EEDC" stroke-width="1.5" cx="86" cy="64" rx="8.5" ry="15"/>
+<path fill="#8B5E3C" stroke-width="1.5" d="M81 53 C83 50 88 51 88 55 C88 58 83 59 81 56 Z M84 70 C86 67 91 68 91 71 C91 75 86 75 84 73 Z"/>
+<path fill="#D4453A" stroke-width="1.5" d="M88 59 C90 57 93 59 92.5 62 C92 65 88 65 88 62 Z"/>
+<path fill="#79A54F" stroke-width="1.5" d="M79 62 C81 60 85 61 85 64 C85 67 81 68 79 66 Z M83 76 C85 75 89 76 88 78.5 C86 80 83 79 83 76 Z"/>
+</svg>

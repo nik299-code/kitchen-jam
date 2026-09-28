@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 88 H100 M30 91.5 H86" stroke-width="1.5" opacity="0.4"/>
+<path fill="#B97A40" d="M18 70 L18 78 C18 81 20 83 23 83 L95 83 C98 83 100 81 100 78 L100 70 Z"/>
+<path fill="#B97A40" d="M18 70 L27 42 C22 33 31 26 40 30 C48 25 72 25 80 30 C89 26 98 33 93 42 L100 70 C100 73 98 75 95 75 L23 75 C20 75 18 73 18 70 Z"/>
+<path fill="#E3B866" stroke-width="1.5" d="M24 70 L32 43 C29 36 34 32 41 35 C49 30 71 30 79 35 C86 32 91 36 88 43 L95 70 Z"/>
+<g fill="#B4D48C">
+<path d="M28 64 C34 50 46 42 58 40 C54 50 42 62 30 67 Z"/>
+<path d="M38 67 C44 54 56 46 68 44 C64 54 52 66 40 70 Z"/>
+<path d="M48 69 C54 56 66 48 78 46 C74 56 62 68 50 72 Z"/>
+<path d="M58 70 C64 58 76 50 88 49 C84 58 72 69 60 73 Z"/>
+</g>
+<path d="M30 67 C42 62 54 50 58 40 M40 70 C52 65 64 54 68 44 M50 72 C62 67 74 56 78 46 M60 73 C72 68 84 58 88 49" stroke="#5E8A3A" stroke-width="2.5"/>
+<path fill="#D4453A" stroke="none" d="M36 56 a1.2 1 0 1 0 0.1 0 Z M52 50 a1.2 1 0 1 0 0.1 0 Z M66 60 a1.2 1 0 1 0 0.1 0 Z M80 58 a1.2 1 0 1 0 0.1 0 Z M46 62 a1 0.8 0 1 0 0.1 0 Z M74 50 a1 0.8 0 1 0 0.1 0 Z"/>
+</svg>

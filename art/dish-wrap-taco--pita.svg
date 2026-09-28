@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M22 88 H98 M34 91.5 H84" stroke-width="1.5" opacity="0.4"/>
+<g transform="translate(54 88) rotate(11) scale(1.06)">
+<path fill="#E6CF98" d="M-28 -46 C-34 -58 -28 -66 -20 -62 L22 -62 C30 -66 34 -58 28 -46 Z"/>
+<path fill="#8B5E3C" d="M-24 -52 C-26 -62 -18 -66 -12 -62 C-10 -70 -2 -72 2 -66 C6 -72 16 -70 16 -63 C22 -66 28 -60 24 -52 Z"/>
+<path fill="#79A54F" stroke-width="1.5" d="M-22 -54 C-26 -60 -20 -64 -16 -60 C-14 -64 -8 -62 -10 -57 Z M8 -60 C10 -66 18 -66 18 -60 C22 -60 22 -55 18 -54 Z"/>
+<path fill="#D4453A" stroke-width="1.5" d="M-6 -64 C-4 -68 2 -68 3 -64 C3 -60 -4 -60 -6 -64 Z"/>
+<path fill="#DDA84E" stroke-width="1.5" d="M-2 -60 L6 -74 L10 -72 L2 -58 Z"/>
+<path fill="#F7EEDC" stroke-width="1.5" d="M-18 -52 C-16 -56 -10 -54 -6 -56 C-2 -53 4 -56 8 -54 C12 -56 16 -53 20 -54 C18 -50 -16 -48 -18 -52 Z"/>
+<path fill="#EFDCAC" d="M-31 -52 C-26 -46 26 -46 31 -52 L29 -43 C22 -37 -22 -37 -29 -43 Z"/><path fill="#B98A4E" stroke="none" d="M-18 -44 a1.8 1.1 0 1 0 0.1 0 Z M6 -43 a2 1.2 0 1 0 0.1 0 Z M20 -46 a1.4 0.9 0 1 0 0.1 0 Z"/>
+<path fill="#F5F0E4" d="M-29 -44 C-22 -38 22 -38 29 -44 L10 0 C6 2 -6 2 -10 0 Z"/>
+<path d="M-24 -32 L22 -32 M-18 -18 L16 -18" stroke="#5C7A94" stroke-width="2" opacity="0.55"/>
+<path d="M-6 -36 L-4 -6 M8 -36 L4 -8" stroke-width="1.5" opacity="0.4"/>
+</g>
+</svg>
