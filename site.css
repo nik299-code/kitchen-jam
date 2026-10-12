@@ -800,3 +800,14 @@ mark { background: var(--yuzu-wash, #fff0bf); color: inherit; border-radius: 3px
   font: 700 16px/1 var(--body); letter-spacing: 0.01em; margin: 0;
 }
 .soon--small { min-height: 40px; padding: 0 16px; border-radius: 12px; font-size: 14px; }
+
+/* Until launch: a plum strip above the bar, in the app's own launch colours
+   (plum #33193f, cream #fff3df — the splash and first-run gate). It scrolls
+   away with the page so the sticky bar is unchanged. Remove at launch, with
+   the .soon labels. */
+.launch-banner {
+  margin: 0; padding: 10px var(--gutter);
+  background: #33193f; color: #fff3df;
+  font: 400 14px/1.4 var(--body); text-align: center;
+}
+.launch-banner strong { font-weight: 700; }
