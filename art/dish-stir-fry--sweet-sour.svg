@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M34 87.2 H86 M44 90.6 H76" stroke-width="1.5" opacity="0.4"/>
+<path d="M22.4 50.6 C15.6 48.4 9.6 51.4 9.8 55.8 C10 60 16 61.6 22.6 58.6" fill="#C9A27E"/>
+<path d="M97.6 50.6 C104.4 48.4 110.4 51.4 110.2 55.8 C110 60 104 61.6 97.4 58.6" fill="#C9A27E"/>
+<path d="M20 54 C20.8 69.6 38 81.4 60.2 81.6 C82.4 81.2 99.4 69.4 100 54 Z" fill="#A7AFB3"/>
+<path d="M27.6 65.4 C31.4 70.6 36 74 41 76.2 M33.6 64 C37 68.4 41.4 71.2 46.4 73.2" stroke-width="1.5" opacity="0.4"/>
+<path d="M51.4 81.4 C54.8 84 65.4 84 68.8 81.4" stroke-width="1.5"/>
+<path d="M20 54 C20.2 48.4 38 45 60 45.2 C82 45 99.8 48.2 100 54 C99.8 59.8 82 63 60 62.8 C38 63 20.2 59.8 20 54 Z" fill="#7F878B"/>
+<path d="M24.6 56.4 C28 49 40 44.4 50 44.8 C58 41.8 70 42.6 78 46 C86 47.4 94 51.6 95.6 56.4 C80 61.4 40 61.4 24.6 56.4 Z" fill="#E0743A" stroke="none"/>
+<g stroke-width="1.5">
+<g transform="translate(36 51) rotate(-10) scale(1.15)"><path d="M-6 0.4 C-7 -2 -5 -4.4 -2.4 -4.2 C-1 -5.6 2.4 -5.4 3.4 -3.8 C6 -3.8 7.2 -1 6 0.8 C6.8 3 4.6 5 2 4.4 C0.4 5.4 -2.6 5.2 -3.4 3.8 C-5.6 3.8 -6.6 2.2 -6 0.4 Z" fill="#DA5F2C"/><path d="M-3.4 -2.4 C-1.6 -3.4 0.8 -3.4 2.2 -2.8" stroke="#F7C2A0"/></g>
+<g transform="translate(58 55.4) rotate(6) scale(1.25)"><path d="M-6 0.4 C-7 -2 -5 -4.4 -2.4 -4.2 C-1 -5.6 2.4 -5.4 3.4 -3.8 C6 -3.8 7.2 -1 6 0.8 C6.8 3 4.6 5 2 4.4 C0.4 5.4 -2.6 5.2 -3.4 3.8 C-5.6 3.8 -6.6 2.2 -6 0.4 Z" fill="#DA5F2C"/><path d="M-3.4 -2.4 C-1.6 -3.4 0.8 -3.4 2.2 -2.8" stroke="#F7C2A0"/></g>
+<g transform="translate(80 50.6) rotate(12) scale(1.1)"><path d="M-6 0.4 C-7 -2 -5 -4.4 -2.4 -4.2 C-1 -5.6 2.4 -5.4 3.4 -3.8 C6 -3.8 7.2 -1 6 0.8 C6.8 3 4.6 5 2 4.4 C0.4 5.4 -2.6 5.2 -3.4 3.8 C-5.6 3.8 -6.6 2.2 -6 0.4 Z" fill="#DA5F2C"/><path d="M-3.4 -2.4 C-1.6 -3.4 0.8 -3.4 2.2 -2.8" stroke="#F7C2A0"/></g>
+<g transform="translate(48 47.4) rotate(4) scale(0.95)"><path d="M-6 0.4 C-7 -2 -5 -4.4 -2.4 -4.2 C-1 -5.6 2.4 -5.4 3.4 -3.8 C6 -3.8 7.2 -1 6 0.8 C6.8 3 4.6 5 2 4.4 C0.4 5.4 -2.6 5.2 -3.4 3.8 C-5.6 3.8 -6.6 2.2 -6 0.4 Z" fill="#DA5F2C"/><path d="M-3.4 -2.4 C-1.6 -3.4 0.8 -3.4 2.2 -2.8" stroke="#F7C2A0"/></g>
+<g transform="translate(47 56.2) rotate(-8) scale(1.15)"><path d="M-4.6 -3.4 L4.4 -3.8 L3.2 3.6 L-3.6 3.8 Z" fill="#F2CC4E"/><path d="M-2.4 -1.4 L1.8 -1.6 M-1.8 1.4 L1.4 1.2" stroke="#C99A2A" opacity="0.7"/></g>
+<g transform="translate(70 47.8) rotate(10) scale(1.1)"><path d="M-4.6 -3.4 L4.4 -3.8 L3.2 3.6 L-3.6 3.8 Z" fill="#F2CC4E"/><path d="M-2.4 -1.4 L1.8 -1.6 M-1.8 1.4 L1.4 1.2" stroke="#C99A2A" opacity="0.7"/></g>
+<g transform="translate(87 55.4) rotate(-14)"><path d="M-4.6 -3.4 L4.4 -3.8 L3.2 3.6 L-3.6 3.8 Z" fill="#F2CC4E"/><path d="M-2.4 -1.4 L1.8 -1.6 M-1.8 1.4 L1.4 1.2" stroke="#C99A2A" opacity="0.7"/></g>
+<path transform="translate(30 56.8) rotate(10)" d="M-4.4 -2.4 C-1.6 -3.6 2.4 -3.4 4.4 -2.4 C4.8 0 4.4 2 4 2.8 C1.4 3.6 -2 3.6 -4 2.8 C-4.8 1 -4.8 -0.6 -4.4 -2.4 Z" fill="#79A54F"/>
+<path transform="translate(68 56.6) rotate(-10) scale(1.05)" d="M-4.4 -2.4 C-1.6 -3.6 2.4 -3.4 4.4 -2.4 C4.8 0 4.4 2 4 2.8 C1.4 3.6 -2 3.6 -4 2.8 C-4.8 1 -4.8 -0.6 -4.4 -2.4 Z" fill="#79A54F"/>
+<path transform="translate(60 46) rotate(6) scale(0.9)" d="M-4.4 -2.4 C-1.6 -3.6 2.4 -3.4 4.4 -2.4 C4.8 0 4.4 2 4 2.8 C1.4 3.6 -2 3.6 -4 2.8 C-4.8 1 -4.8 -0.6 -4.4 -2.4 Z" fill="#D4453A"/>
+<path transform="translate(92 51) rotate(20) scale(0.85)" d="M-4.4 -2.4 C-1.6 -3.6 2.4 -3.4 4.4 -2.4 C4.8 0 4.4 2 4 2.8 C1.4 3.6 -2 3.6 -4 2.8 C-4.8 1 -4.8 -0.6 -4.4 -2.4 Z" fill="#D4453A"/>
+</g>
+<path d="M20 54 C20.2 59.8 38 63 60 62.8 C82 63 99.8 59.8 100 54 L97 54.4 C96.4 59 80.6 61.4 60 61.4 C39.4 61.4 23.6 59 23 54.4 Z" fill="#A7AFB3"/>
+<g stroke-width="1.5">
+<g transform="translate(44 26) rotate(-20) scale(1.45)"><path d="M-4.6 -3.4 L4.4 -3.8 L3.2 3.6 L-3.6 3.8 Z" fill="#F2CC4E"/><path d="M-2.4 -1.4 L1.8 -1.6 M-1.8 1.4 L1.4 1.2" stroke="#C99A2A" opacity="0.7"/></g>
+<g transform="translate(72 17) rotate(18) scale(1.3)"><path d="M-6 0.4 C-7 -2 -5 -4.4 -2.4 -4.2 C-1 -5.6 2.4 -5.4 3.4 -3.8 C6 -3.8 7.2 -1 6 0.8 C6.8 3 4.6 5 2 4.4 C0.4 5.4 -2.6 5.2 -3.4 3.8 C-5.6 3.8 -6.6 2.2 -6 0.4 Z" fill="#DA5F2C"/><path d="M-3.4 -2.4 C-1.6 -3.4 0.8 -3.4 2.2 -2.8" stroke="#F7C2A0"/></g>
+<path transform="translate(86 31) rotate(30) scale(1.3)" d="M-4.4 -2.4 C-1.6 -3.6 2.4 -3.4 4.4 -2.4 C4.8 0 4.4 2 4 2.8 C1.4 3.6 -2 3.6 -4 2.8 C-4.8 1 -4.8 -0.6 -4.4 -2.4 Z" fill="#79A54F"/>
+</g>
+<path d="M33.4 40 C30.6 35.2 31 30 33.6 26.2 M91.4 40.4 C93.4 36.4 93 32.4 90.4 30.2" stroke-width="1.5" opacity="0.4"/>
+</svg>

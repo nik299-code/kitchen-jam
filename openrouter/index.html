@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<!-- The iOS half of "Connect with OpenRouter" (src/lib/llm/openrouter-oauth.ts).
+
+     WHY THIS PAGE EXISTS: OpenRouter will not redirect to a custom scheme.
+     Measured 2026-09-25 in the app's own sign-in sheet: with
+     callback_url=improvkitchen://openrouter a signed-in user is dropped on
+     OpenRouter's home page, no Authorize screen; the same sheet with a
+     localhost callback shows it. So OpenRouter redirects here, to a real https
+     page, and this page hands the code on to the app.
+
+     The app's ASWebAuthenticationSession watches for the improvkitchen scheme
+     and catches the redirect below before iOS routes it anywhere, so the sheet
+     closes and the app receives the URL.
+
+     ONLY `code` or `error` is forwarded, to one fixed target. The code alone
+     is useless: exchanging it needs the PKCE verifier, which never leaves the
+     app. Published with the legal pages by scripts/publish-legal.mjs. -->
+<title>Back to Kitchen Jam</title>
+<style>
+  :root { --paper:#fbf8ef; --ink:#2e2a26; --soft:#6b635a; --line:#e2dabf; }
+  @media (prefers-color-scheme: dark) { :root { --paper:#1c1a17; --ink:#efe7d9; --soft:#a9a093; --line:#3a352f; } }
+  body { margin:0; padding:3.5rem 1.25rem; background:var(--paper); color:var(--ink);
+         font:16px/1.65 ui-rounded,-apple-system,system-ui,sans-serif; text-align:center; }
+  main { max-width:26rem; margin:0 auto; }
+  p { color:var(--soft); }
+  .btn { display:inline-block; margin-top:1rem; padding:.8rem 1.6rem; border-radius:999px;
+         font-weight:700; text-decoration:none; color:var(--paper); background:var(--ink); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Back to Kitchen Jam…</h1>
+  <p id="note">If the app does not open by itself, tap the button.</p>
+  <a id="open" class="btn" href="improvkitchen://openrouter" hidden>Open Kitchen Jam</a>
+</main>
+<script>
+  (function () {
+    var q = new URLSearchParams(window.location.search);
+    var out = new URLSearchParams();
+    if (q.get("code")) out.set("code", q.get("code"));
+    else if (q.get("error")) out.set("error", q.get("error"));
+    else {
+      document.getElementById("note").textContent =
+        "This page only works from the Connect button in Kitchen Jam.";
+      return;
+    }
+    var target = "improvkitchen://openrouter?" + out.toString();
+    var link = document.getElementById("open");
+    link.href = target;
+    link.hidden = false;
+    window.location.replace(target);
+  })();
+</script>
+</body>
+</html>

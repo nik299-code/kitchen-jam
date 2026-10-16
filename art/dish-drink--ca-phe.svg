@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M40 87 H80 M50 90 H68"/>
+<path fill="#E6EEF1" d="M39 38 L44.4 82.4 C50 84.6 70 84.6 75.6 82.4 L81 38 Z"/>
+<path fill="#4E3022" d="M40 46 L42.9 70.4 C50 72.6 70 72.6 77.1 70.4 L80 46 Z"/>
+<path fill="#F3E6C8" d="M42.9 70.4 C50 72.6 70 72.6 77.1 70.4 L75.8 81 C70 83 50 83 44.2 81 Z"/>
+<path stroke="#B08A6A" stroke-width="1.5" d="M43 70.4 C50 72.6 70 72.6 77 70.4"/>
+<g stroke-width="1.5">
+<path fill="#8E6E5A" d="M45 50 L53.4 48.6 L54.6 56.4 L46.2 57.8 Z"/>
+<path fill="#8E6E5A" d="M57.6 49.4 L66 50.6 L65 58.4 L56.6 57.2 Z"/>
+<path fill="#8E6E5A" d="M67.6 55.6 L75.4 53.6 L76.8 61 L69 63 Z"/>
+<path fill="#8E6E5A" d="M49 60.4 L57 59.8 L57.4 67.4 L49.4 68 Z"/>
+<path stroke="#D9C4B4" d="M46.6 51.2 L51 50.4 M59 51 L63.4 51.6 M69.2 56.6 L73.4 55.4 M50.6 61.6 L54.6 61.2"/>
+</g>
+<path fill="#5E3C2A" stroke-width="1.5" d="M80 46 C80 47.6 71 49 60 49 C49 49 40 47.6 40 46 C40 44.4 49 43 60 43 C71 43 80 44.4 80 46 Z"/>
+<path stroke="#FFFFFF" stroke-width="2" opacity="0.75" d="M42.4 42 L46 76"/>
+<path d="M39 38 L44.4 82.4 C50 84.6 70 84.6 75.6 82.4 L81 38"/>
+<path fill="#E6EEF1" d="M81 38 C81 40.6 71.6 42.6 60 42.6 C48.4 42.6 39 40.6 39 38 C39 35.4 48.4 33.4 60 33.4 C71.6 33.4 81 35.4 81 38 Z"/>
+<path fill="#C9D0D3" d="M76 35.4 C76 38.6 68.8 40.4 60 40.4 C51.2 40.4 44 38.6 44 35.4 C44 32.2 51.2 30.4 60 30.4 C68.8 30.4 76 32.2 76 35.4 Z"/>
+<path fill="#A7AFB3" d="M50 34.6 L48.4 19.4 L71.6 19.4 L70 34.6 C66 36.4 54 36.4 50 34.6 Z"/>
+<path stroke="#FFFFFF" stroke-width="1.8" opacity="0.7" d="M52 22.4 L53.2 33"/>
+<path stroke-width="1.5" opacity="0.4" d="M64.6 23 L64 33.6 M67.6 22.8 L66.8 33.2"/>
+<path fill="#C9D0D3" d="M73.4 19.4 C73.4 21.8 67.4 23.2 60 23.2 C52.6 23.2 46.6 21.8 46.6 19.4 C46.6 17 52.6 15.6 60 15.6 C67.4 15.6 73.4 17 73.4 19.4 Z"/>
+<path fill="#A7AFB3" stroke-width="1.5" d="M56 17.4 C56 14.2 57.8 12.6 60 12.6 C62.2 12.6 64 14.2 64 17.4 C62 18.4 58 18.4 56 17.4 Z"/>
+<path stroke="#4E3022" stroke-width="2.4" d="M60 41.4 L60 43.6"/>
+</svg>

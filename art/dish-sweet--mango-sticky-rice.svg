@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M24 88 H96 M38 91.5 H82"/>
+<path fill="#D5E0E8" d="M18 74 C18 79.2 37 83.4 60 83.4 C83 83.4 102 79.2 102 74 C102 68.8 83 64.8 60 64.8 C37 64.8 18 68.8 18 74 Z"/>
+<path stroke="#5C7A94" stroke-width="1.5" d="M28 73.6 C34 70.4 48 68.8 60 68.8 C72 68.8 86 70.4 92 73.6"/>
+<path stroke-width="1.5" opacity="0.4" d="M78 81 C84 80.4 90 79.2 94 77.6"/>
+<path fill="#FBF6EA" d="M24.4 75 C22.8 66 28 56.4 37.6 53.2 C45.6 50.6 53.6 53.4 57.2 59.6 C59.8 64.2 59.4 70.6 57.6 75.6 C47.6 78 32.4 77.8 24.4 75 Z"/>
+<path stroke="#DCCBA6" stroke-width="1.5" d="M30 70 l2 -0.6 M36 73.4 l2 0.4 M44 70.6 l1.8 -0.8 M50 73.8 l2 -0.2 M33 64.4 l1.6 -1 M53 67.4 l1.4 1"/>
+<path stroke-width="4.6" d="M27.4 63.4 C32 58.6 38 61.4 43 57 C47 53.8 52.4 55.4 55.6 60.4 M43 57 C44.4 60.4 43.6 63.6 42.6 65.4"/>
+<path stroke="#FFFDF7" stroke-width="2.6" d="M27.4 63.4 C32 58.6 38 61.4 43 57 C47 53.8 52.4 55.4 55.6 60.4 M43 57 C44.4 60.4 43.6 63.6 42.6 65.4"/>
+<path stroke="#B8862E" stroke-width="2.4" d="M34 57.6 h0.1 M39.4 55 h0.1 M48.4 53.8 h0.1 M51 58.6 h0.1 M36.6 61.6 h0.1"/>
+<g transform="translate(59.6 76.4) rotate(-26)"><path fill="#EFA63A" d="M0 1 C2 -6 16 -10.4 27 -7 C29.4 -6 29.4 -2.6 27.4 -1.8 C19 1.6 9 3.6 1.6 3.8 C0 3.6 -0.4 2.2 0 1 Z"/><path stroke="#F9D27A" stroke-width="1.5" d="M4.6 -2.6 C9 -5.6 16 -7 22.6 -6"/></g>
+<g transform="translate(60.6 78.4) rotate(-12)"><path fill="#F2B23E" d="M0 1 C2 -6 16 -10.4 27 -7 C29.4 -6 29.4 -2.6 27.4 -1.8 C19 1.6 9 3.6 1.6 3.8 C0 3.6 -0.4 2.2 0 1 Z"/><path stroke="#F9D27A" stroke-width="1.5" d="M4.6 -2.6 C9 -5.6 16 -7 22.6 -6"/></g>
+<g transform="translate(61.6 80.6) rotate(1)"><path fill="#F5BD4A" d="M0 1 C2 -6 16 -10.4 27 -7 C29.4 -6 29.4 -2.6 27.4 -1.8 C19 1.6 9 3.6 1.6 3.8 C0 3.6 -0.4 2.2 0 1 Z"/><path stroke="#FBDC8E" stroke-width="1.5" d="M4.6 -2.6 C9 -5.6 16 -7 22.6 -6"/></g>
+<path fill="#79A54F" stroke-width="1.5" transform="translate(56.6 56.4) rotate(-50) scale(1.05)" d="M0 0 C2.6 -3.4 7.6 -3.6 10.4 -0.2 C7.4 3 2.8 3 0 0 Z"/>
+<path fill="#8DB862" stroke-width="1.5" transform="translate(56.8 56.8) rotate(10) scale(0.95)" d="M0 0 C2.6 -3.4 7.6 -3.6 10.4 -0.2 C7.4 3 2.8 3 0 0 Z"/>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M30 87.4 H90 M42 90.8 H78"/>
+<path fill="#A7AFB3" d="M16 69 C17 82.6 103 82.6 104 69 L103.4 71.2 C102 83.6 18 83.6 16.6 71.2 Z"/>
+<path fill="#C9D0D3" d="M16 69 C16.3 56.1 42.4 55.8 60 56 C77.6 56.2 103.8 56.4 104 69 C103.7 82 77.6 82.2 60 81.9 C42.4 81.8 16.2 81.6 16 69 Z"/>
+<path stroke-width="1.5" opacity="0.5" d="M26 69.4 C26.3 59.6 46.4 59.3 60 59.5 C73.6 59.6 93.8 59.8 94 69.4 C93.7 79.3 73.6 79.5 60 79.2 C46.4 79.2 26.2 79 26 69.4 Z"/>
+<g transform="translate(64 62)">
+<path fill="#E8B04E" d="M-14 0 C-14.5 -9 -8 -15 0 -15 C8 -15 14.5 -9 14 0 C10 3.6 -10 3.6 -14 0 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M-11.6 0.8 C-6 2.6 6 2.6 11.6 0.8"/>
+<path stroke="#FFF3D6" stroke-width="2" d="M-8.4 -8.6 C-6.8 -11.4 -4 -12.8 -1 -13"/>
+<path stroke="#B9793E" stroke-width="2.2" d="M4 -9 h0.1 M8 -4 h0.1 M-3 -4.6 h0.1"/>
+</g>
+<g transform="translate(39 64)">
+<path fill="#E8B04E" d="M-14 0 C-14.5 -9 -8 -15 0 -15 C8 -15 14.5 -9 14 0 C10 3.6 -10 3.6 -14 0 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M-11.6 0.8 C-6 2.6 6 2.6 11.6 0.8"/>
+<path stroke="#FFF3D6" stroke-width="2" d="M-8.4 -8.6 C-6.8 -11.4 -4 -12.8 -1 -13"/>
+<path stroke="#B9793E" stroke-width="2.2" d="M5 -8 h0.1 M8.4 -3 h0.1 M-2 -5 h0.1"/>
+</g>
+<g transform="translate(53 75.4)">
+<path fill="#EBB955" d="M-15 0 C-15.5 -9.6 -8.6 -16 0 -16 C8.6 -16 15.5 -9.6 15 0 C10.8 3.8 -10.8 3.8 -15 0 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M-12.4 0.8 C-6.4 2.8 6.4 2.8 12.4 0.8"/>
+<path stroke="#FFF3D6" stroke-width="2" d="M-9 -9.2 C-7.2 -12.2 -4.2 -13.6 -1 -13.8"/>
+<path stroke="#B9793E" stroke-width="2.2" d="M5 -9 h0.1 M9 -3.6 h0.1 M-3.4 -4.4 h0.1"/>
+</g>
+<path fill="#A7AFB3" d="M77 70 C77.6 78 82.8 80.2 89 80.2 C95.2 80.2 100.4 78 101 70 Z"/>
+<path fill="#C9D0D3" d="M77 70 C77.3 67.2 83.2 67.1 89 67.1 C94.8 67.1 100.7 67.2 101 70 C100.7 72.8 94.8 72.9 89 72.9 C83.2 72.9 77.3 72.8 77 70 Z"/>
+<path fill="#EFC046" stroke-width="1.5" d="M79.6 70.2 C80 65 84.6 62.6 89 62.6 C93.6 62.6 98 65 98.4 70.2 C96 72 82 72 79.6 70.2 Z"/>
+<path fill="#F7D66A" stroke-width="1.5" d="M82.6 67.2 l3.8 -1.2 l1.8 2.8 l-3.8 1.2 Z M89.4 65.4 l3.6 -0.6 l1.2 3 l-3.6 0.6 Z M91.6 69.4 l3.4 -0.8 l1 2 l-3.4 0.6 Z"/>
+<path fill="#79A54F" stroke-width="1.5" d="M86 63.6 c1.4 -1.8 4 -1.6 4.6 -0.4 c-1.2 1.6 -3.4 1.8 -4.6 0.4 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M79.4 74.4 C81.2 76.8 84 78 86.4 78.4"/>
+</svg>

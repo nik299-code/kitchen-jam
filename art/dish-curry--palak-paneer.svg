@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M36 86.6 H84 M45 90 H75"/>
+<g transform="translate(0 2.6)">
+<path fill="#E9E1CF" d="M45.6 70 C45.8 74 46.4 77.2 47.4 79 C54.6 80.8 65.6 80.8 72.8 79 C73.8 77.2 74.4 74 74.6 70"/>
+<path fill="#E9E1CF" d="M15.6 50.4 C16.6 62.4 36 73.6 60.2 73.4 C84.6 73.2 103 62 104.4 49.8 Z"/>
+<path stroke="#5C7A94" stroke-width="2" d="M20 58 C32 65.8 87.4 66.4 100.2 57.4"/>
+<path stroke-width="1.5" opacity="0.4" d="M78.4 70.6 C83.4 69.4 87.6 67.4 90.8 64.8 M86.4 68.6 C89.6 67 92.2 65.2 94 63.2"/>
+<path fill="#F5F0E4" d="M104.1 50 C104.1 55.6 82 59.8 60 59.8 C38.3 59.8 15.8 55.9 15.8 50 C15.8 44.9 37 40.2 60 40.2 C87.4 40.2 104.1 44.6 104.1 50 Z"/>
+<path fill="#4F7A3A" d="M19.4 51.2 C19.8 45.4 38 41.6 60.4 41.8 C83.6 42 100.8 45.8 100.4 51 C100 56 82 59.2 59.4 59.2 C37.4 59.2 19 56.8 19.4 51.2 Z"/>
+<path stroke="#3A5E2C" stroke-width="1.5" d="M26 52.6 C30.4 55 36 55.8 40.4 55.2 M79.8 55.6 C85.6 55.6 91 54.4 94 52.2"/><path stroke="#6E9A4E" stroke-width="1.5" d="M30 48.6 C38 46 48 45.6 54 46.4 M70 54.8 C78 55.4 86 54.2 90 52"/><path fill="#FBF6EA" d="M26 45 L32.1 40.4 L39.8 41.9 L33.7 46.5 Z"/><path fill="#F0E6CF" d="M26 45 L33.7 46.5 L33.9 54 L26.2 52.5 Z"/><path fill="#E0D2B2" d="M33.7 46.5 L39.8 41.9 L39.9 49.4 L33.9 54 Z"/><path fill="#FBF6EA" d="M43 40.5 L49.6 35.5 L58 37.1 L51.4 42.2 Z"/><path fill="#F0E6CF" d="M43 40.5 L51.4 42.2 L51.6 50.2 L43.2 48.5 Z"/><path fill="#E0D2B2" d="M51.4 42.2 L58 37.1 L58.2 45.1 L51.6 50.2 Z"/><path fill="#FBF6EA" d="M64 41 L70.6 36 L79 37.6 L72.4 42.7 Z"/><path fill="#F0E6CF" d="M64 41 L72.4 42.7 L72.6 50.7 L64.2 49 Z"/><path fill="#E0D2B2" d="M72.4 42.7 L79 37.6 L79.2 45.6 L72.6 50.7 Z"/><path fill="#FBF6EA" d="M52 50 L58.1 45.4 L65.8 46.9 L59.7 51.5 Z"/><path fill="#F0E6CF" d="M52 50 L59.7 51.5 L59.9 58.5 L52.2 57 Z"/><path fill="#E0D2B2" d="M59.7 51.5 L65.8 46.9 L65.9 53.9 L59.9 58.5 Z"/><path fill="#FBF6EA" d="M78 46 L84.1 41.4 L91.8 42.9 L85.7 47.5 Z"/><path fill="#F0E6CF" d="M78 46 L85.7 47.5 L85.9 55 L78.2 53.5 Z"/><path fill="#E0D2B2" d="M85.7 47.5 L91.8 42.9 L91.9 50.4 L85.9 55 Z"/><path stroke="#FBF4E6" stroke-width="2.6" d="M36 55.6 C40 57 45 57 48 56"/>
+</g>
+</svg>

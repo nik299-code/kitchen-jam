@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M24 88 H96 M38 91.5 H82"/>
+<path fill="#F5F0E4" d="M20 74.4 C21 80.4 38 84 60 84 C82 84 99 80.4 100 74.4 C100 67.8 82 65 60 65 C38 65 20 67.8 20 74.4 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M30 74 C34 70 50 68.6 60 68.6 C70 68.6 86 70 90 74"/>
+<path fill="#FBF2DE" stroke="none" d="M34.6 47 L72 47 L72 54.6 L34.6 54.6 Z"/><path fill="#9A6236" stroke="none" d="M34.6 54.6 L72 54.6 L72 60.2 L34.6 60.2 Z"/><path fill="#FBF2DE" stroke="none" d="M34.6 60.2 L72 60.2 L72 67.4 L34.6 67.4 Z"/><path fill="#9A6236" stroke="none" d="M34.6 67.4 L72 67.4 L72 72.8 L34.6 72.8 Z"/><path fill="#FBF2DE" stroke="none" d="M34.6 72.8 L72 72.8 L72 77 L34.6 77 Z"/><path fill="#EADFC4" stroke="none" d="M72 47 L86 41 L86 48.6 L72 54.6 Z"/><path fill="#7E4E2A" stroke="none" d="M72 54.6 L86 48.6 L86 54.2 L72 60.2 Z"/><path fill="#EADFC4" stroke="none" d="M72 60.2 L86 54.2 L86 61.400000000000006 L72 67.4 Z"/><path fill="#7E4E2A" stroke="none" d="M72 67.4 L86 61.400000000000006 L86 66.8 L72 72.8 Z"/><path fill="#EADFC4" stroke="none" d="M72 72.8 L86 66.8 L86 71 L72 77 Z"/>
+<path fill="#7A4A2C" d="M34.6 47 L48.6 41 L86 41 L72 47 Z"/>
+<path stroke="#5A3420" stroke-width="1.8" d="M42 45 h0.3 M48 43 h0.3 M55 45.2 h0.3 M61 42.6 h0.3 M67 44.6 h0.3 M73 42 h0.3 M79 41.6 h0.3 M52 41.8 h0.3 M64 40.4 h0.3 M46 46.2 h0.3 M70 46 h0.3 M58 43.4 h0.3 M76 44.4 h0.3 M83 41 h0.3"/>
+<path stroke="#A87250" stroke-width="1.5" d="M50 42.4 C58 42 66 42.2 74 42"/>
+<path d="M34.6 54.6 L72 54.6 L86 48.6 M34.6 60.2 L72 60.2 L86 54.2 M34.6 67.4 L72 67.4 L86 61.400000000000006 M34.6 72.8 L72 72.8 L86 66.8" stroke-width="1.5"/>
+<path d="M34.6 47 L48.6 41 L86 41 L72 47 Z M34.6 47 L34.6 77 L72 77 L72 47 M72 77 L86 71 L86 41"/>
+<path stroke-width="1.5" opacity="0.4" d="M76 48 l0 22 M80 46 l0 22"/>
+<path stroke="#7A4A2C" stroke-width="1.8" d="M26 72.4 h0.3 M30 75.6 h0.3 M90 72 h0.3 M94 75 h0.3 M88 77.6 h0.3"/>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 96" fill="none" stroke="#2E2A26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.5" opacity="0.4" d="M24 88 H96 M38 91.5 H82"/>
+<path fill="#F5F0E4" d="M20 74.4 C21 80.4 38 84 60 84 C82 84 99 80.4 100 74.4 C100 67.8 82 65 60 65 C38 65 20 67.8 20 74.4 Z"/>
+<path stroke-width="1.5" opacity="0.4" d="M30 74 C34 70 50 68.6 60 68.6 C70 68.6 86 70 90 74"/>
+<path fill="#E2AE4A" stroke-width="1.5" d="M26 75 C30 70.6 90 70.6 94 75 C90 79.4 30 79.4 26 75 Z"/>
+<path stroke="#FBE6A0" stroke-width="1.5" d="M32 75.6 C40 77.4 50 77.6 56 77.4"/>
+<path fill="#D9A94A" d="M21 57 L34 62.6 L34 71.6 L21 66 Z"/>
+<path fill="#C48E3A" d="M34 62.6 L47 57 L47 66 L34 71.6 Z"/>
+<path stroke="#A8703C" stroke-width="1.5" d="M21 60 L34 65.6 L47 60 M21 63 L34 68.6 L47 63"/>
+<path fill="#E9B85A" d="M21 57 L34 51.4 L47 57 L34 62.6 Z"/>
+<path fill="#8DBA4A" stroke-width="1.5" d="M39.5 57 C39.6 57.7 39.7 58.9 38.6 59.3 C37.5 59.7 34.4 59.5 32.7 59.3 C31 59.1 29.4 58.6 28.6 58 C27.8 57.5 27.3 56.5 27.9 55.8 C28.6 55.2 30.8 54.4 32.4 54.2 C34.1 54.1 36.5 54.7 37.7 55.1 C38.9 55.6 39.3 56.3 39.5 57 Z"/>
+<path stroke="#4E7A32" stroke-width="1.5" d="M32 57 h0.1 M35.6 56.4 h0.1 M34.4 58 h0.1"/>
+<path stroke="#FFF1B8" stroke-width="1.5" d="M25 56.6 L29 54.6 M40 59.2 L42.4 58"/>
+<path fill="#D9A94A" d="M47 57 L60 62.6 L60 71.6 L47 66 Z"/>
+<path fill="#C48E3A" d="M60 62.6 L73 57 L73 66 L60 71.6 Z"/>
+<path stroke="#A8703C" stroke-width="1.5" d="M47 60 L60 65.6 L73 60 M47 63 L60 68.6 L73 63"/>
+<path fill="#E9B85A" d="M47 57 L60 51.4 L73 57 L60 62.6 Z"/>
+<path fill="#8DBA4A" stroke-width="1.5" d="M67.3 57 C67.2 57.6 65.2 58.4 63.7 58.9 C62.2 59.4 59.9 59.9 58.4 59.8 C57 59.6 55.5 58.6 54.9 58 C54.2 57.4 54.1 56.6 54.7 56 C55.3 55.4 57 54.6 58.6 54.5 C60.1 54.3 62.5 54.6 63.9 55 C65.4 55.4 67.3 56.4 67.3 57 Z"/>
+<path stroke="#4E7A32" stroke-width="1.5" d="M58 57 h0.1 M61.6 56.4 h0.1 M60.4 58 h0.1"/>
+<path stroke="#FFF1B8" stroke-width="1.5" d="M51 56.6 L55 54.6 M66 59.2 L68.4 58"/>
+<path fill="#D9A94A" d="M73 57 L86 62.6 L86 71.6 L73 66 Z"/>
+<path fill="#C48E3A" d="M86 62.6 L99 57 L99 66 L86 71.6 Z"/>
+<path stroke="#A8703C" stroke-width="1.5" d="M73 60 L86 65.6 L99 60 M73 63 L86 68.6 L99 63"/>
+<path fill="#E9B85A" d="M73 57 L86 51.4 L99 57 L86 62.6 Z"/>
+<path fill="#8DBA4A" stroke-width="1.5" d="M93 57 C93 57.6 91.4 58.6 90 59 C88.6 59.5 86.2 59.7 84.6 59.5 C83 59.4 80.9 58.7 80.3 58.1 C79.7 57.5 80.2 56.6 81 56 C81.7 55.4 83.2 54.8 84.7 54.6 C86.1 54.5 88.2 54.8 89.6 55.2 C91 55.6 92.9 56.4 93 57 Z"/>
+<path stroke="#4E7A32" stroke-width="1.5" d="M84 57 h0.1 M87.6 56.4 h0.1 M86.4 58 h0.1"/>
+<path stroke="#FFF1B8" stroke-width="1.5" d="M77 56.6 L81 54.6 M92 59.2 L94.4 58"/>
+<path fill="#D9A94A" d="M34 65 L47 70.6 L47 79.6 L34 74 Z"/>
+<path fill="#C48E3A" d="M47 70.6 L60 65 L60 74 L47 79.6 Z"/>
+<path stroke="#A8703C" stroke-width="1.5" d="M34 68 L47 73.6 L60 68 M34 71 L47 76.6 L60 71"/>
+<path fill="#E9B85A" d="M34 65 L47 59.4 L60 65 L47 70.6 Z"/>
+<path fill="#8DBA4A" stroke-width="1.5" d="M53.5 65 C53.5 65.6 52.2 66.5 50.9 67 C49.5 67.4 47 67.9 45.4 67.8 C43.9 67.6 42.4 66.7 41.7 66 C41 65.4 40.5 64.4 41.2 63.9 C41.8 63.3 44.2 63 45.8 62.8 C47.4 62.7 49.5 62.7 50.8 63.1 C52.1 63.4 53.5 64.4 53.5 65 Z"/>
+<path stroke="#4E7A32" stroke-width="1.5" d="M45 65 h0.1 M48.6 64.4 h0.1 M47.4 66 h0.1"/>
+<path stroke="#FFF1B8" stroke-width="1.5" d="M38 64.6 L42 62.6 M53 67.2 L55.4 66"/>
+<path fill="#D9A94A" d="M60 65 L73 70.6 L73 79.6 L60 74 Z"/>
+<path fill="#C48E3A" d="M73 70.6 L86 65 L86 74 L73 79.6 Z"/>
+<path stroke="#A8703C" stroke-width="1.5" d="M60 68 L73 73.6 L86 68 M60 71 L73 76.6 L86 71"/>
+<path fill="#E9B85A" d="M60 65 L73 59.4 L86 65 L73 70.6 Z"/>
+<path fill="#8DBA4A" stroke-width="1.5" d="M78.7 65 C78.7 65.7 78.5 66.7 77.3 67.2 C76.1 67.6 73.3 67.8 71.5 67.6 C69.8 67.5 67.3 66.9 66.6 66.3 C65.9 65.6 66.3 64.5 67.1 63.9 C68 63.2 69.9 62.6 71.6 62.4 C73.2 62.3 75.7 62.6 76.9 63 C78.1 63.5 78.6 64.3 78.7 65 Z"/>
+<path stroke="#4E7A32" stroke-width="1.5" d="M71 65 h0.1 M74.6 64.4 h0.1 M73.4 66 h0.1"/>
+<path stroke="#FFF1B8" stroke-width="1.5" d="M64 64.6 L68 62.6 M79 67.2 L81.4 66"/>
+</svg>
