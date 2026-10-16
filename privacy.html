@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Kitchen Jam</title>
+<style>
+  :root { --paper:#fbf8ef; --ink:#2e2a26; --soft:#6b635a; --line:#e2dabf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#1c1a17; --ink:#efe7d9; --soft:#a9a093; --line:#3a352f; }
+  }
+  body { margin:0; padding:2.5rem 1.25rem 5rem; background:var(--paper); color:var(--ink);
+         font:16px/1.65 ui-rounded,-apple-system,system-ui,sans-serif; }
+  main { max-width:44rem; margin:0 auto; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .25rem; }
+  h2 { font-size:1.15rem; margin:2.25rem 0 .5rem; }
+  p, li { color:var(--ink); }
+  .sub { color:var(--soft); margin:0 0 2rem; }
+  strong { font-weight:700; }
+  ul { padding-left:1.2rem; }
+  li { margin:.35rem 0; }
+  hr { border:0; border-top:1px solid var(--line); margin:2.5rem 0; }
+  .note { color:var(--soft); font-size:.925rem; }
+  a { color:inherit; }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="sub">Kitchen Jam · last updated 16 October 2026</p>
+
+<p><strong>Kitchen Jam has no server.</strong> There is no account to create, nothing to sign in to, and no database of ours holding your recipes, your cooking notes or your API key. What you save stays on your device — and, on iPhone with iCloud backup on, in your own private iCloud storage. When you ask for a recipe, your request goes to the AI that writes it: Apple Intelligence on Apple's Private Cloud Compute, or the provider you chose. It never comes to us.</p>
+
+<h2>What stays on your device</h2>
+<p>Everything you save:</p>
+<ul>
+  <li>Recipes you generate or save, and the ratings and notes you add to them</li>
+  <li>Your profile — diet, allergies, dislikes, favourite cuisines, equipment, preferred units, servings</li>
+  <li>Your pantry and shopping list</li>
+  <li>Your API key and provider settings</li>
+  <li>App preferences such as theme and whether voice is switched on</li>
+  <li>A local record of recent sessions, used for improving the app</li>
+</ul>
+<p>This is kept in this app's own storage. On iPhone that is inside the app's sandbox, which other apps cannot read, and deleting the app deletes that copy — <strong>except your API key, which is kept in the Keychain</strong>, and anything in your iCloud backup, described next. In a web browser it is browser storage, which anything running on that site could read.</p>
+<p class="note">Your API key is the exception, and is held more carefully than the rest. On iPhone it is stored in the iOS Keychain — the encrypted store the system keeps passwords in — rather than alongside your recipes, and it is never synchronised to iCloud. If the Keychain cannot be reached the app keeps the key in its ordinary storage instead, so that a device problem cannot silently lose it; the settings screen tells you which of the two happened for the key you saved. In a web browser there is no Keychain, so the key is held in browser storage like everything else; anything running on that site could read it. Either way the key stays on the device, and the app never sends it anywhere except to the provider you chose.</p>
+<p class="note"><strong>Keychain items outlive the app.</strong> Deleting the app removes the copy of your recipes, profile, pantry and settings on the device, but iOS keeps Keychain items, so your API key can still be there if you reinstall — the app deliberately looks for it and offers it back, rather than making you find the key again after iOS reclaims storage. To remove the key itself, use <strong>Forget key</strong> in Settings before you delete the app. That button tells you if it fails, and if you want a key gone for certain, revoke it in your provider's console: that is the only step we cannot do for you and the only one that stops a key that has already been copied elsewhere.</p>
+
+<h2>Your iCloud backup (iPhone)</h2>
+<p>If you are signed in to iCloud on your iPhone and <strong>Back up to iCloud</strong> is on in Settings, a copy of your recipes (with their ratings and notes), your profile (including your allergies and favourite cuisines), your pantry and your shopping list is also stored in your own private iCloud storage. It moves directly between your device and Apple, under your iCloud account, so that it comes back if you reinstall the app and appears on your other devices signed in to the same account. It does not pass through us, and we cannot see it: it sits in your iCloud, not in any storage of ours. Apple's own privacy policy covers how iCloud stores it.</p>
+<p><strong>Never included:</strong> your API key, your provider settings, and the local record of sessions. Those stay on the device.</p>
+<p>Backup is on by default, because the point is to survive a deletion nobody plans for. You can turn it off, or delete the copy in iCloud, in Settings. Deleting the iCloud copy keeps the recipes on your device and turns backup off. If you are not signed in to iCloud, nothing is backed up and the app says so in Settings.</p>
+
+<h2>What leaves your device, and only when you act</h2>
+<p><strong>What a recipe request contains.</strong> When you ask for a recipe, the app sends what you typed, your answers to its questions, and the parts of your saved data the recipe needs: your profile (diet, allergies, dislikes, spice level, equipment, servings and units), your favourite cuisines, what is in your pantry, and the cuisines of your recent recipes. It goes to one place: the AI you use, described in the next two paragraphs.</p>
+
+<h3 id="apple-intelligence">Apple Intelligence and Private Cloud Compute</h3>
+<p><strong>To Apple, if you use Apple Intelligence.</strong> On an iPhone or iPad with Apple Intelligence running iOS 27, Kitchen Jam can use Apple Intelligence with no key. Recipes are then written by Apple's model on Apple's Private Cloud Compute servers, not on your phone. Your request goes from your device to Apple, through the system's Foundation Models framework. It does not pass through us, and we cannot see it.</p>
+<p>These are Apple's commitments, not ours: Apple states that data sent to Private Cloud Compute is used only to answer your request, is not kept after the response, and is not stored or made accessible to Apple, and that independent researchers can inspect the software that runs on those servers. Apple describes this in <a href="https://www.apple.com/legal/privacy/data/en/intelligence-engine/">Apple Intelligence &amp; Privacy</a> and on its <a href="https://security.apple.com/blog/private-cloud-compute/">security blog</a>; the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> applies to it.</p>
+<p>Apple sets a daily limit on these requests. The limit is Apple's, and we do not see your usage. When you reach it, the app tells you, and you can wait or use your own key instead. If you choose your own provider in Settings, nothing goes to Apple's Private Cloud Compute.</p>
+
+<p><strong>To the AI provider you chose.</strong> If you use your own key instead, the app sends the same request directly from your device to the provider whose key you entered. That is OpenAI, Anthropic, Google, OpenRouter, Groq, or any endpoint you configure yourself. If you connect OpenRouter by signing in, OpenRouter sends a one-time sign-in code back through a static web page of ours that only hands the code to the app; the code is useless without a secret that never leaves your device, and the page stores nothing. It does not pass through us, because there is nowhere for it to pass through. <strong>That provider's own privacy policy governs what they do with it</strong>, and it is worth reading; we have no control over and no visibility into their handling.</p>
+<p><strong>Your notes, only if you ask.</strong> Notes you write on a recipe are private. They are never included when you share a recipe. The single exception is "Make it again, with my notes" — that deliberately sends them to the AI you use — Apple Intelligence or your own provider — so the recipe can be revised, and the app names where they go and shows you the notes before anything is sent.</p>
+<p><strong>Recipes you share.</strong> Sharing a recipe puts it wherever you send it. Shared recipes never include your notes or ratings. A shared link carries the recipe inside the link itself, after the “#”, and browsers do not send that part to any server. The page the link opens is a static page hosted on GitHub Pages that hands the recipe to the app. Nothing is uploaded to us, because there is nowhere to upload it.</p>
+<p><strong>Data you export.</strong> Settings offers an export of your saved data. It goes where you send it. The export does not contain your API key.</p>
+
+<h2>Voice</h2>
+<p>If you turn voice on, speech is converted to text <strong>on your iPhone</strong>. The app requires on-device transcription and refuses to run if the device cannot do it, rather than falling back to sending audio elsewhere. No recording is stored or transmitted. When the app reads steps aloud, it uses your device's own speech voices, on the device.</p>
+<p class="note">When iOS asks for speech recognition permission it shows its own standard wording about speech being sent to Apple. That describes the system capability in general. This app does not use that path.</p>
+
+<h2>Lock Screen, widgets, Siri and Spotlight</h2>
+<p>While you cook, the current step and timer can show on your Lock Screen and in the Dynamic Island, and the Kitchen Jam widget can show the recipe in progress or your newest recipes. Anyone who can see your phone can see these, even when it is locked. You can turn Live Activities off in the iOS Settings app, under Kitchen Jam, and remove the widget like any other. Your recipe titles are added to your device's Spotlight index so you can find them, and Siri and Shortcuts can find or open a recipe, read a step, or start a timer. All of this stays on your device, apart from what Siri itself does with your voice under Apple's own terms.</p>
+
+<h2>What we do not do</h2>
+<ul>
+  <li>No analytics, tracking, telemetry or crash reporting of any kind</li>
+  <li>No advertising, and no advertising identifiers</li>
+  <li>No accounts, no email collection, no profiles</li>
+  <li>No selling or sharing of personal information — we hold none to sell</li>
+  <li>No cookies beyond what your own browser stores for the app itself</li>
+</ul>
+
+<h2>Children</h2>
+<p>Kitchen Jam is not directed at children and collects no personal information from anyone, including children.</p>
+
+<h2>Recipes, nutrition and allergies</h2>
+<p>Recipes are generated by an AI model and can be wrong. Nutrition figures are estimates, not measurements. The app checks recipes against allergens you tell it about, but that check is an aid and not a guarantee — <strong>always read labels and verify ingredients yourself.</strong> Nothing in the app is medical or dietary advice.</p>
+
+<h2>Your control</h2>
+<p>Delete the app, or clear the site data in your browser, and everything on that device is gone — with two exceptions, which we would rather state plainly than let you discover.</p>
+<p><strong>Your iCloud backup survives it, by design.</strong> If backup was on, your recipes, profile, pantry and shopping list are still in your iCloud and come back when you reinstall. To remove them, tap <strong>Delete iCloud copy</strong> in Settings before you delete the app.</p>
+<p><strong>Your API key can survive it.</strong> On iPhone the key lives in the iOS Keychain, and iOS keeps Keychain items when an app is deleted. On the web, clearing the site data does remove the key along with everything else. So on iPhone: tap <strong>Forget key</strong> in Settings first, and the key is deleted from the Keychain. If that ever fails the app says so instead of pretending otherwise.</p>
+<p>Beyond your own device and your own iCloud there is no copy and no request to make of us, because we never had it. Apple states that Private Cloud Compute keeps no copy of your requests. Your key does exist at the provider who issued it, and only they can revoke it — worth doing if a key has ever been shared or pasted somewhere you did not intend.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top changes with it.</p>
+
+<hr>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:hello@mykitchenjam.app">hello@mykitchenjam.app</a></p>
+
+</main>
+</body>
+</html>
